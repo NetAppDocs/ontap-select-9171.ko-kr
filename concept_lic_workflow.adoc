@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_workflow.html 
+keywords: license, licensing, purchase, purchasing, workflow 
+summary: ONTAP Select 배포에 대한 라이선스를 구매하고 적용하기 위한 워크플로를 따를 수 있습니다. 
+---
+= ONTAP Select 라이선스 구매 시 워크플로
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+다음 워크플로는 ONTAP Select 배포에 대한 라이선스를 구매하고 적용하는 과정을 보여줍니다. 라이선스를 구매할 때는 라이선스 모델과 스토리지 용량을 선택해야 합니다.
+
+정확한 프로세스는 용량 계층 라이선스를 사용하는지 또는 용량 풀 라이선스를 사용하는지에 따라 다릅니다.
+
+9자리 라이센스 일련 번호:: 일련 번호는 노드(용량 계층) 또는 스토리지 풀(용량 풀)에 적용됩니다.
+라이센스 잠금 ID:: 용량 풀 라이선스를 사용하는 경우 배포 인스턴스에 대한 라이선스 잠금 ID가 있어야 합니다.
+라이센스 웹 사이트:: 다양한 웹 사이트에서 용량 계층 및 용량 풀 라이선스를 얻습니다.
+
+
+image:purchased_license_workflow.png["프로덕션 ONTAP Select 배포를 위한 스토리지 라이선스를 구매하고 설치하는 데 사용되는 프로세스를 설명합니다."]
+
+.관련 정보
+link:task_adm_licenses.html["ONTAP Select 라이선스"]

@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: concept_lic_cp_compare_ct.html 
+keywords: license, licensing, Capacity Pools, Capacity Tiers, comparing 
+summary: 용량 풀과 용량 계층 라이선싱 모델 사이에는 몇 가지 차이점이 있습니다. 
+---
+= ONTAP Select 용량 풀 및 용량 계층 라이선싱 비교
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+다음 표에서는 ONTAP Select 가 지원하는 두 가지 프로덕션 라이선스 모델을 비교합니다.
+
+[cols="20,40,40"]
+|===
+|  | 용량 계층 | 용량 풀 
+
+
+| 라이센스 일련 번호 | NetApp 에서 생성하여 노드에 할당된 9자리 숫자 | NetApp 에서 생성하여 용량 풀에 할당된 9자리 숫자 
+
+
+| 라이센스 잠금 | ONTAP Select 노드에 잠금됨 | License Manager 인스턴스에 잠김 
+
+
+| 라이센스 기간 | 영구 (갱신 불필요) | 구매에 따른 고정 기간(갱신 필요) 
+
+
+| 데이터 집계를 위한 임대 기간 | 해당 없음 | 1시간에서 7일까지 
+
+
+| 노드 일련 번호 | 9자리 숫자이며 라이센스 일련 번호와 동일함 | 20자리 숫자이며 License Manager에서 생성됨 
+
+
+| 지원하다 | 추가 기능 및 시간 제한 | 포함 및 공동 임기 
+
+
+| 라이센스 유형 | 스탠다드, 프리미엄, 프리미엄 XL | 스탠다드, 프리미엄, 프리미엄 XL 
+
+
+| 평가판 라이센스 사용 가능 | 예 | 예 
+
+
+| 평가에서 생산 업그레이드로 | 예 | 아니요 
+
+
+| ONTAP Select (소형~중형, 중형~대형) | 예 | 예 
+
+
+| 시행: 라이센스 만료 | 해당 없음 | 예 (유예 기간 없음) 
+|===

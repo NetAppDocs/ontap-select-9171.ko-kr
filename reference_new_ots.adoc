@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: reference_new_ots.html 
+keywords: new features 
+// summary: The current release includes several new features and improvements specific to ONTAP Select. 
+summary: 현재 릴리스에는 ONTAP Select 에만 적용되는 여러 가지 새로운 기능 및 개선 사항이 포함되어 있습니다. 
+---
+= ONTAP Select 의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 의 지원되는 버전에서 제공되는 새로운 기능과 향상된 기능에 대해 알아보세요.
+
+
+
+== ONTAP Select 9.17.1
+
+ONTAP Select 9.17.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+KVM 호스트의 로컬 연결 NVMe 디스크에 대한 소프트웨어 RAID 지원:: ONTAP Select 9.17.1은 커널 기반 가상 머신(KVM) 하이퍼바이저 호스트에서 로컬 ONTAP Select 연결된 NVMe 디스크에 대한 소프트웨어 RAID 지원을 도입합니다.
++
+--
+로컬로 연결된 NVMe 디스크에 소프트웨어 RAID를 사용하려면 다음이 필요합니다.link:kvm-host-configuration-and-preparation-checklist.html["PCI 패스스루(DirectPath IO) 구성"] KVM 호스트를 준비할 때. 이렇게 하면 KVM 호스트가 로컬로 연결된 NVMe 디스크에 직접 액세스할 수 있으며, 이는 다음 작업에 필요합니다.
+
+* NVMe 드라이브를 사용하도록 KVM 호스트 구성
+* 클러스터 배포 후 소프트웨어 RAID 사용
+
+
+link:concept_stor_swraid_local.html["로컬 연결 스토리지를 위한 소프트웨어 RAID 구성 서비스에 대해 알아보세요"].
+
+--
+KVM 호스트에서 클러스터 확장 및 축소 지원:: ONTAP Select 9.17.1부터 클러스터 확장 및 축소 기능이 커널 기반 가상 머신(KVM)과 ESXi 하이퍼바이저 호스트 모두에서 지원됩니다. ONTAP Select 9.16.1 및 9.15.1의 경우, 클러스터 확장 및 축소 기능은 ESXi 하이퍼바이저 호스트에서만 지원됩니다.
++
+--
+기존 ONTAP Select 클러스터에서 클러스터 확장 및 축소 기능을 사용하여 6노드에서 8노드 클러스터로 크기를 늘리거나 8노드에서 6노드 클러스터로 크기를 줄일 수 있습니다.
+
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."].
+
+--
+ESXi 호스트에서 클러스터 확장 및 축소에 대한 향상된 지원:: ONTAP Select 9.17.1부터 ESXi 호스트의 6노드 및 12노드 클러스터 간 클러스터 확장 및 축소가 지원됩니다.
++
+--
+--
+기존 ESXi 클러스터의 클러스터 크기를 다음과 같이 늘릴 수 있습니다.
+
+* 6개 노드에서 8개, 10개 또는 12개 노드로
+* 8개 노드에서 10개 또는 12개 노드까지
+* 10개에서 12개 노드까지
+
+
+다음과 같은 단위로 기존 ESXi 클러스터의 클러스터 크기를 줄일 수 있습니다.
+
+* 12개 노드에서 10개, 8개 또는 6개 노드로
+* 10개 노드에서 8개 또는 6개 노드로
+* 8개에서 6개 노드로
+
+
+--
+link:task_cluster_expansion_contraction.html["클러스터 확장 및 축소와 지원되는 KVM 및 ESXi 하이퍼바이저 버전에 대해 알아보세요."].
+
+--
+SnapMirror 클라우드 지원:: ONTAP Select 9.17.1부터 SnapMirror 클라우드가 ONTAP Select 에서 지원됩니다. SnapMirror 클라우드는 ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드할 때 기본적으로 활성화되는 라이선스가 부여된 ONTAP 기능입니다.
++
+--
+https://docs.netapp.com/us-en/ontap/concepts/snapmirror-cloud-backups-object-store-concept.html["SnapMirror 클라우드 백업을 통해 개체 스토리지에 대해 알아보세요"^].
+
+--
+SnapLock Select Enterprise 지원:: ONTAP Select 9.17.1부터 새로운 배포에는 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)가 자동으로 라이선스됩니다.  ONTAP Select 9.16.1 및 이전 버전에서 업그레이드하려면 SnapLock Select 라이선스를 다운로드해야 합니다.link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^] 그리고 수동으로 적용하세요.
+다중 노드 클러스터에서 vSAN ESA 지원:: ONTAP Select 9.17.1부터 vSAN Express Storage Architecture(ESA)에 대한 지원이 확장되어 다중 노드 클러스터를 배포할 수 있게 되었습니다. 이 향상된 기능을 사용하면 vSAN ESA 구성을 배포할 수 있습니다.
++
+--
+vSAN ESA는 ESX 전용 구성이며 vSphere 8에 도입된 VMware vSAN용 새로운 아키텍처입니다. vSAN ESA는 특히 NVMe 기반 TLC 플래시 장치를 사용할 때 향상된 효율성, 확장성 및 성능을 제공하도록 설계되었습니다.
+
+ONTAP Select Deploy 및 ONTAP Select for ESX는 스토리지 풀에 vSAN 또는 외부 어레이 유형의 데이터 저장소를 사용하여 ONTAP Select 단일 노드 및 다중 노드 클러스터를 구성할 수 있도록 지원합니다.
+
+[NOTE]
+====
+콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 액세스해야 합니다. 제한된 역할로 작업하는 경우 vSAN ESA 배포에 필요합니다.
+
+link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["콘텐츠 라이브러리 작업에 대한 권한 수준 액세스에 대해 알아보세요."^].
+
+====
+--
+업데이트된 NDA 드라이버 지원:: ONTAP Select 9.17.1부터 FreeBSD NDA(NVMe Direct Access) 장치 드라이버가 NVD(NVMe Express Disk Driver)를 대체합니다. FreeBSD 드라이버는 NVMe 명령 프로토콜을 구현하여 직접 액세스 장치를 지원합니다. ONTAP Select 9.17.1 클러스터를 배포하거나 기존 ONTAP Select 클러스터를 9.17.1 버전으로 업그레이드하면 NVMe 장치를 구성할 때 FreeBSD 드라이버가 기본적으로 시작됩니다.
++
+--
+ONTAP Select 9.16.1 및 이전 버전의 경우 NVD는 ONTAP Select 배포에서 NVMe 장치에 대한 지원을 계속 제공합니다.
+
+--
+업데이트된 KVM 하이퍼바이저 지원:: ONTAP Select 9.17.1부터 KVM 하이퍼바이저가 Red Hat Enterprise Linux(RHEL) 9.6 및 Rocky Linux 9.6에서 지원됩니다.
+향상된 VMware ESXi 지원:: ONTAP Select 9.17.1에는 VMware ESXi 9.0에 대한 지원이 포함되어 있습니다.
+
+
+
+
+== ONTAP Select 9.16.1
+
+ONTAP Select 9.16.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+업데이트된 NetApp 라이선스 파일 지원:: ONTAP Select 9.16.1부터 NetApp 라이선스 파일(NLF) 지원이 업데이트되었습니다. 새로운 NLF 형식에는 ARP, ONTAP S3 및 S3 SnapMirror 기능에 대한 라이선스가 포함됩니다. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["자세히 알아보기"].
++
+--
+새로운 ONTAP Select 9.16.1 Deploy의 경우 새로운 NLF 형식이 자동으로 적용됩니다. 기존 ONTAP Select Deploy를 9.16.1로 업그레이드하면 새로운 NLF 형식이 적용되지 않습니다. ARP, ONTAP S3 및 S3 SnapMirror 기능 라이선스를 받으려면 업그레이드 후 업데이트된 NLF를 다운로드해야 합니다. ONTAP Select 9.15.1 이하 버전으로 되돌리는 경우 업그레이드 전에 사용하던 기능 라이선스를 다시 설치해야 합니다.
+
+--
+자율형 랜섬웨어 보호 지원:: ONTAP Select 9.16.1은 자율 랜섬웨어 보호(ARP)를 지원합니다. ONTAP Select 9.16.1은 ARP 수동 업데이트만 지원하며 자동 업데이트는 지원하지 않습니다. ARP 기능 라이선스는 ONTAP Select 9.16.1의 NLF(네트워크 파일 시스템)에 포함되어 있습니다. link:reference_lic_ontap_features.html#ontap-features-automatically-enabled-by-default["자세히 알아보기"].
+향상된 VMware ESXi 지원:: ONTAP Select 9.16.1에는 VMware ESXi 8.0 U3에 대한 지원이 포함되어 있습니다.
+업데이트된 KVM 하이퍼바이저 지원:: ONTAP Select 9.16.1부터 KVM 하이퍼바이저가 RHEL 9.5 및 Rocky Linux 9.5에서 지원됩니다.
+
+
+
+
+== ONTAP Select 9.15.1
+
+ONTAP Select 9.15.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+업데이트된 KVM 하이퍼바이저 지원:: ONTAP Select 9.15.1부터 RHEL 9.4 및 Rocky Linux 9.4에서 커널 기반 가상 머신(KVM) 하이퍼바이저가 지원됩니다.
+클러스터 확장 및 축소 지원:: ONTAP Select 9.15.1부터 클러스터 확장 및 축소가 지원됩니다.
++
+--
+* 6노드에서 8노드 클러스터로 클러스터 확장
++
+클러스터 확장 기능을 사용하여 클러스터 크기를 6노드 클러스터에서 8노드 클러스터로 늘릴 수 있습니다. 1노드, 2노드 또는 4노드 클러스터에서 6노드 또는 8노드 클러스터로의 클러스터 확장은 현재 지원되지 않습니다. link:task_cluster_expansion_contraction.html#expand-the-cluster["자세히 알아보기"].
+
+* 클러스터 수축 8노드에서 6노드 클러스터로
++
+클러스터 축소 기능을 사용하여 클러스터 크기를 8노드 클러스터에서 6노드 클러스터로 줄일 수 있습니다. 6노드 또는 8노드 클러스터에서 1노드, 2노드 또는 4노드 클러스터로의 클러스터 축소는 현재 지원되지 않습니다. link:task_cluster_expansion_contraction.html#contract-the-cluster["자세히 알아보기"].
+
+
+
+--
+
+
+
+NOTE: 클러스터 확장 및 축소에 대한 지원은 ESX 클러스터에만 국한됩니다.
+
+
+
+== ONTAP Select 9.14.1
+
+ONTAP Select 9.14.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+KVM 하이퍼바이저 지원:: ONTAP Select 9.14.1부터 KVM 하이퍼바이저 지원이 다시 시작되었습니다. 이전에는 ONTAP Select 9.10.1에서 KVM 하이퍼바이저에 새 클러스터를 배포하는 기능이 제거되었고, ONTAP Select Select 9.11.1에서는 오프라인으로 전환하거나 삭제하는 기능을 제외한 기존 KVM 클러스터 및 호스트 관리 기능이 제거되었습니다.
+VMware vCenter 플러그인 배포가 더 이상 지원되지 않습니다.:: ONTAP Select 9.14.1부터 Deploy VMware vCenter 플러그인이 더 이상 지원되지 않습니다.
+업데이트된 ONTAP Select Deploy 지원:: ONTAP Select Deploy 9.14.1P2보다 이전 버전을 사용 중이시라면, 가능한 한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드하시기 바랍니다. 자세한 내용은 다음을 참조하세요.link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["ONTAP Select 9.14.1 릴리스 노트"^] .
+향상된 VMware ESXi 지원:: ONTAP Select 9.14.1에는 VMware ESXi 8.0 U2에 대한 지원이 포함되어 있습니다.
+
+
+
+
+== ONTAP Select 9.13.1
+
+ONTAP Select 9.13.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+TCP를 통한 NVMe 지원:: ONTAP Select 9.13.1로 업그레이드하는 경우 NVMe over TCP를 지원하는 새 라이선스가 필요합니다. 이 라이선스는 ONTAP Select 9.13.1 버전에서 처음 배포할 때 자동으로 포함됩니다.
+업데이트된 VMware ESXi 지원:: ONTAP 9.13.1부터 VMware ESXi 8.0.1 GA(빌드 20513097)는 하드웨어 버전 4 이상에서 지원됩니다.
+업데이트된 ONTAP Select Deploy 지원:: 2024년 4월부터 ONTAP Select Deploy 9.13.1은 NetApp 지원 사이트에서 더 이상 제공되지 않습니다. ONTAP Select Deploy 9.13.1을 사용 중이시라면 최대한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드하시기 바랍니다. 자세한 내용은 다음을 참조하세요.link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["ONTAP Select 9.14.1 릴리스 노트"^] .
+
+
+
+
+== ONTAP Select 9.12.1
+
+ONTAP Select 9.12.1은 핵심 ONTAP 제품의 현재 릴리스에 포함된 대부분의 새로운 기능을 활용합니다. ONTAP Select 에만 적용되는 새로운 기능이나 개선 사항은 포함되어 있지 않습니다.
+
+2024년 4월부터 ONTAP Select Deploy 9.12.1은 NetApp 지원 사이트에서 더 이상 제공되지 않습니다. ONTAP Select Deploy 9.12.1을 사용 중이시라면 최대한 빨리 ONTAP Select Deploy 9.14.1P2로 업그레이드하시기 바랍니다. 자세한 내용은 다음을 참조하세요.link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2886733["ONTAP Select 9.14.1 릴리스 노트"^] .
+
+
+
+== ONTAP Select 9.11.1
+
+ONTAP Select 9.11.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+향상된 VMware ESXi 지원:: ONTAP Select 9.11.1에는 VMware ESXi 7.0 U3C에 대한 지원이 포함되어 있습니다.
+VMware NSX-T 지원:: ONTAP Select 9.10.1 이상 릴리스는 VMware NSX-T 버전 3.1.2에 적합합니다. OVA 파일과 ONTAP Select Deploy 관리 유틸리티를 사용하여 배포된 ONTAP Select 단일 노드 클러스터와 함께 NSX-T를 사용할 때 기능적 문제나 결함은 없습니다 . 그러나 ONTAP Select 다중 노드 클러스터와 함께 NSX-T를 사용할 경우 ONTAP Select 9.11.1에 대한 다음 제한 사항에 유의해야 합니다.
++
+--
+* 네트워크 연결 검사기
++
+Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행하면 실패합니다.
+
+
+
+--
+KVM 하이퍼바이저는 더 이상 지원되지 않습니다.::
++
+--
+* ONTAP Select 9.10.1부터 KVM 하이퍼바이저에 새 클러스터를 더 이상 배포할 수 없습니다.
+* ONTAP Select 9.11.1부터 기존 KVM 클러스터와 호스트에 대한 모든 관리 기능을 더 이상 사용할 수 없으며, 오프라인으로 전환 및 삭제 기능만 사용할 수 있습니다.
++
+NetApp 고객이 ONTAP Select for KVM에서 ONTAP Select for ESXi를 포함한 다른 ONTAP 플랫폼으로의 전체 데이터 마이그레이션을 계획하고 실행할 것을 강력히 권장합니다. 자세한 내용은 다음을 참조하세요. https://mysupport.netapp.com/info/communications/ECMLP2877451.html["EOA 공지"^]
+
+
+
+--
+
+
+
+
+== ONTAP Select 9.10.1
+
+ONTAP Select 9.10.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+VMware NSX-T 지원:: ONTAP Select 9.10.1은 VMware NSX-T 버전 3.1.2에 적합합니다. OVA 파일과 ONTAP Select Deploy 관리 유틸리티를 사용하여 배포된 ONTAP Select 단일 노드 클러스터와 함께 NSX-T를 사용할 때 기능적 문제나 결함은 없습니다 . 그러나 ONTAP Select 다중 노드 클러스터와 함께 NSX-T를 사용할 경우 다음 요구 사항 및 제한 사항에 유의해야 합니다.
++
+--
+* 클러스터 MTU
++
+추가 오버헤드를 고려하여 클러스터를 배포하기 전에 클러스터 MTU 크기를 8800으로 수동으로 조정해야 합니다. VMware 지침에 따르면 NSX-T를 사용할 때 200바이트 버퍼를 허용합니다.
+
+* 네트워크 4x10Gb 구성
++
+4개의 NIC로 구성된 VMware ESXi 호스트에 ONTAP Select 배포하는 경우, 배포 유틸리티는 내부 트래픽을 두 개의 다른 포트 그룹으로, 외부 트래픽을 두 개의 다른 포트 그룹으로 분할하는 모범 사례를 따르도록 안내합니다. 그러나 오버레이 네트워크를 사용하는 경우 이 구성은 효과가 없으므로 권장 사항을 무시해야 합니다. 이 경우, 내부 포트 그룹과 외부 포트 그룹을 각각 하나씩만 사용해야 합니다.
+
+* 네트워크 연결 검사기
++
+Deploy CLI를 통해 사용할 수 있는 네트워크 연결 검사기는 NSX-T 기반 네트워크에 대해 실행하면 실패합니다.
+
+
+
+--
+KVM 하이퍼바이저는 더 이상 지원되지 않습니다.:: ONTAP Select 9.10.1부터는 KVM 하이퍼바이저에 새 클러스터를 배포할 수 없습니다. 하지만 이전 릴리스의 클러스터를 9.10.1로 업그레이드하는 경우에는 Deploy 유틸리티를 사용하여 클러스터를 관리할 수 있습니다.
+
+
+
+
+== ONTAP Select 9.9.1
+
+ONTAP Select 9.9.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
+
+프로세서 제품군 지원:: ONTAP Select 9.9.1부터 ONTAP Select 에서는 Intel Xeon Sandy Bridge 이상의 CPU 모델만 지원됩니다.
+업데이트된 VMware ESXi 지원:: ONTAP Select 9.9.1에서는 VMware ESXi에 대한 지원이 강화되었습니다. 이제 다음 릴리스가 지원됩니다.
++
+--
+* ESXi 7.0 U2
+* ESXi 7.0 U1
+
+
+--
+
+
+
+
+== ONTAP Select 9.8
+
+ONTAP Select 9.8에는 여러 가지 새로운 기능과 변경된 기능이 포함되었습니다.
+
+고속 인터페이스:: 고속 인터페이스 기능은 25G(25GbE) 및 40G(40GbE) 옵션을 제공하여 네트워크 연결을 향상시킵니다. 이러한 고속 환경에서 최상의 성능을 얻으려면 ONTAP Select 설명서에 설명된 포트 매핑 구성 관련 모범 사례를 따라야 합니다.
+업데이트된 VMware ESXi 지원:: ONTAP Select 9.8에는 VMware ESXi 지원과 관련하여 두 가지 변경 사항이 있습니다.
++
+--
+* ESXi 7.0이 지원됩니다(GA 빌드 15843807 이상)
+* ESXi 6.0은 더 이상 지원되지 않습니다.
+
+
+--
+

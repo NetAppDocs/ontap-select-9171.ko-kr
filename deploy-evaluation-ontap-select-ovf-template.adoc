@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: deploy-evaluation-ontap-select-ovf-template.html 
+keywords: ontap, select, ovf, template, deployment, evaluation, license 
+summary: VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가판 인스턴스를 빠르게 배포할 수 있습니다. 
+---
+= ONTAP Select 클러스터의 90일 평가 인스턴스 배포
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware ESXi에서 OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터의 90일 평가판 인스턴스를 빠르게 배포할 수 있습니다.
+
+.이 작업에 관하여
+* NetApp 에서 일련 번호나 저장 용량 라이선스를 얻을 필요가 없습니다.
+* 구매한 라이선스와 동일한 양의 저장 공간을 사용자 데이터에 할당할 수 있습니다.
+* 평가판 라이선스에서 구매한 라이선스로 노드를 업그레이드할 수 없습니다.
+* OVF 템플릿을 배포하려면 vCenter 계정만 사용할 수 있습니다. ESXi 호스트에 직접 설치하는 것은 현재 지원되지 않습니다.
+* OVF 템플릿(ova 파일에 포함)은 vSphere 독립 실행형 클라이언트 또는 vSphere 웹 클라이언트(ESXi 6.5 이상에서는 유일한 옵션)를 사용하여 설치해야 합니다. ONTAP Select Deploy 관리 유틸리티는 사용하지 마세요.
+
+
+
+
+== ONTAP Select 클러스터 호스트 준비
+
+ONTAP Select 클러스터가 배포된 ESXi 호스트를 준비하려면 다음 요구 사항을 따르십시오. 플랫폼 설명은 VMFS-5 또는 VMFS-6 파일 시스템을 사용하여 포맷된 로컬 직접 연결 스토리지(DAS)를 사용하는 표준 또는 소규모 인스턴스 유형 구성을 기준으로 합니다.
+
+image:prepare_ESXi_host_requirements.png["ESXi 호스트를 준비하기 위한 요구 사항"]
+
+호스트 구성 옵션에 대한 추가 정보는 다음을 참조하세요.link:esxi-host-configuration-and-preparation-checklist.html["ONTAP Select 설치 설명서"] .
+
+
+
+== OVF 템플릿을 사용하여 단일 노드 ONTAP Select 클러스터 배포
+
+지원되는 64비트 ESXi 호스트 서버에서 다음 단계를 완료하세요.
+
+.단계
+. NetApp 평가 제품 프로그램 페이지로 이동하여 * ONTAP Select*를 선택하여 ONTAP Select OVF 템플릿을 로컬 워크스테이션에 다운로드합니다.
+. 관리자 권한이 있는 계정을 사용하여 VMware vSphere 웹 클라이언트에 Sign in .
+. 다음 옵션 중 하나를 사용하여 호스트를 선택하세요.
++
+** *파일* > *OVF 템플릿 배포*를 선택합니다.
+** *데이터 센터*를 선택하세요. 그런 다음 마우스 오른쪽 버튼을 클릭하고 *OVF 템플릿 배포*를 선택하세요.
+
+
+. 로컬 워크스테이션에서 ONTAP Select 소스 OVA 파일을 선택한 후 *다음*을 선택합니다.
+. OVF 템플릿 세부 정보를 검토하고 *다음*을 선택합니다.
+. EULA 세부 정보를 검토하고 *동의*를 선택하세요. 그런 다음 *다음*을 선택하세요.
+. 새 가상 머신의 이름을 입력하고 *다음*을 선택합니다.
+. 사용 가능한 데이터 저장소가 두 개 이상인 경우 데이터 저장소를 선택하고 *다음*을 선택합니다.
+. *Thick Provision Lazy Zeroed*를 선택한 후 *Next*를 선택합니다.
+. 데이터 및 관리 네트워크를 선택한 후 *다음*을 선택하세요.
+. *속성* 페이지에서 필요한 모든 값을 입력하고 *다음*을 선택합니다.
+. 배포 세부 정보를 검토하고 *배포 후 전원 켜기*를 선택하세요.
+. 배포 프로세스를 시작하려면 *마침*을 선택하세요.
+. ONTAP Select 클러스터가 배포된 후에는 System Manager 또는 CLI 인터페이스를 사용하여 클러스터를 구성할 수 있습니다. 표준 ONTAP *disk assign* 작업을 사용하여 디스크를 할당해야 합니다.
+
+
+.관련 정보
+link:http://mysupport.netapp.com/matrix["상호 운용성 매트릭스 도구"^]

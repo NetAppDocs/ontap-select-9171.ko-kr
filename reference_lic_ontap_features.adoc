@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: reference_lic_ontap_features.html 
+keywords: license, licensing, ontap features, default ontap features 
+summary: ONTAP Select 대부분의 ONTAP 기능을 완벽하게 지원합니다. 대부분의 ONTAP 기능은 클러스터를 배포할 때 각 노드에 자동으로 라이선스가 부여됩니다. 하지만 일부 기능에는 별도의 라이선스가 필요합니다. 
+---
+= ONTAP Select ONTAP 기능을 지원합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 대부분의 ONTAP 기능을 지원합니다. 대부분의 ONTAP 기능은 클러스터를 배포할 때 각 노드에 자동으로 라이선스가 부여됩니다. 하지만 일부 기능에는 별도의 라이선스가 필요합니다.
+
+
+NOTE: 하드웨어별 종속성이 있는 ONTAP 기능은 일반적으로 ONTAP Select 에서 지원되지 않습니다.
+
+
+
+== ONTAP 기능은 기본적으로 자동으로 활성화됩니다.
+
+다음 ONTAP 기능은 ONTAP Select 에서 지원되며 기본적으로 라이선스가 부여됩니다.
+
+* 자율 랜섬웨어 보호(ARP)(수동 업데이트)
+* CIFS
+* 중복 제거 및 압축
+* FlexCache
+* FlexClone
+* iSCSI
+* NDMP
+* NetApp 볼륨 암호화(제한 없는 국가에만 해당)
+* NFS
+* TCP를 통한 NVMe
+* ONTAP 멀티테넌시 기능
+* ONTAP S3
+* S3 SnapMirror
+* SnapMirror
+* SnapMirror 클라우드
+* SnapRestore
+* SnapVault
+* 스토리지 VM 재해 복구(SVM DR)
++
+
+NOTE: ONTAP Select 최대 16개의 관계를 가진 SVM DR을 소스 및 대상으로 지원합니다. SVM DR 지원은 소스 ONTAP 버전 2 이상에서만 지원됩니다. 예를 들어, ONTAP Select 9.12.1 소스는 대상 ONTAP 버전 9.12.1, 9.13.1 또는 9.14.1에 연결할 수 있습니다.
+
+
+
+
+
+== 별도로 라이센스되는 ONTAP 기능
+
+다음을 포함하여 기본적으로 활성화되지 않은 ONTAP 기능에 대해서는 별도의 라이선스를 취득해야 합니다.
+
+* FabricPool
+* MetroCluster SDS(ONTAP Select 프리미엄 라이선스 제공)
+
+
+[NOTE]
+====
+* ONTAP Select 9.16.1 및 이전 버전의 경우 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)를 다음에서 사용할 수 있습니다.link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^] .
+* ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
+* StorageGRID 활용하는 경우 FabricPool 라이선스가 필요하지 않습니다.
+
+
+====
+.관련 정보
+* link:concept_ots_overview.html#compare-ontap-select-and-ontap-9["ONTAP Select 와 ONTAP 9 비교"]
+* link:https://mysupport.netapp.com/site/systems/master-license-keys["NetApp ONTAP 마스터 라이선스 키"^]
+
