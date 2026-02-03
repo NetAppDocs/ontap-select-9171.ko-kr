@@ -18,29 +18,31 @@ ONTAP Select Deploy 관리 유틸리티를 설치하고 해당 유틸리티를 �
 
 
 
-== 1단계: 가상 머신 이미지를 다운로드합니다
+== 가상 머신 이미지를 다운로드합니다
 
-NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드합니다.
+NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.
 
 .시작하기 전에
 https://mysupport.netapp.com/site/user/registration["등록된 NetApp 지원 사이트 계정이 있습니다."^].
 
 .이 작업에 관하여
-ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 가상 머신(VM)으로 패키징되어 있습니다. 단일 압축 파일은 ESXi 호스트용 `OVA` 확장자와 KVM 호스트용 `TGZ` 확장자를 가집니다. 이 VM은 ONTAP Select 노드용 Deploy 서버와 설치 이미지를 제공합니다.
+ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 가상 머신(VM)으로 패키징되어 있습니다. 단일 압축 파일의 확장자는 `ova`입니다. 이 VM은 ONTAP Select 노드용 Deploy 서버 및 설치 이미지를 제공합니다.
 
 .단계
-. link:https://mysupport.netapp.com/site/downloads/["NetApp Support 사이트 다운로드"^] 페이지에 액세스합니다.
-. 아래로 스크롤하여 *ONTAP Select Deploy*를 선택합니다.
-. 원하는 ONTAP Select 버전을 선택하십시오.
+. 웹 브라우저를 사용하여 link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^]에 접속하고 로그인하세요.
+. 메뉴에서 *Downloads*를 선택한 다음 드롭다운 메뉴에서 *Downloads*를 선택합니다.
+. 다운로드 페이지의 모든 제품 A-Z 아래에서 문자 *O*를 선택합니다.
+. 아래로 스크롤하여 *ONTAP Select*를 선택합니다.
+. 원하는 패키지 릴리스를 선택합니다.
 . 최종 사용자 라이선스 계약(EULA)을 검토하고 *동의 및 계속*을 선택하세요.
-. 적절한 *ONTAP Select Deploy Install* 패키지를 선택하여 다운로드하십시오. 필요에 따라 모든 프롬프트에 응답하십시오.
+. 적절한 패키지를 선택하고 다운로드하여 필요에 따라 모든 프롬프트에 응답합니다.
 
 
 
 
-== 2단계: ONTAP Select Deploy OVA 서명을 확인합니다
+== ONTAP Select Deploy OVA 서명을 확인하십시오
 
-설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA) 서명을 확인하십시오.
+설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA) 서명을 확인해야 합니다.
 
 .시작하기 전에
 시스템이 다음 요구 사항을 충족하는지 확인하세요.
@@ -72,9 +74,9 @@ ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표�
 | `ONTAPdeploy.ova.sig` | SHA-256 알고리즘은 해시된 후 원격 지원 에이전트(RSA)에 의해 서명됩니다. `csc-prod` 설치자를 위한 키와 서명. 
 |===
 . 다음을 확인하십시오. `ONTAPdeploy.ova.sig` 파일은 연관된 인증서와 검증 명령을 사용하고 있습니다.
-. 서명을 확인하십시오.
+. 다음 명령을 사용하여 서명을 확인하십시오.
 +
-[source, cli]
+[listing]
 ----
 openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTAPdeploy.ova.sig  ONTAPdeploy.ova
 ----
@@ -82,9 +84,9 @@ openssl dgst  -sha256 -verify ONTAP-Select-Deploy-Production.pub -signature ONTA
 
 
 
-== 3단계: 가상 머신 배포
+== 가상 머신 배포
 
-OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
+OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작해야 합니다. 설치 과정의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.
 
 .시작하기 전에
 ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM을 배포할 준비를 해야 합니다.
@@ -115,14 +117,14 @@ vSphere를 사용하는 경우, OVF 템플릿 배포 마법사에는 네트워�
 --
 . vSphere 클라이언트에 액세스하여 로그인합니다.
 . 계층 구조에서 적절한 위치로 이동하여 *OVF 템플릿 배포*를 선택합니다.
-. OVA 파일을 선택하고 Deploy OVF Template 마법사를 완료하십시오. 사용 환경에 맞는 옵션을 선택하십시오.
+. OVA 파일을 선택하고 환경에 맞는 옵션을 선택하여 Deploy OVF Template 마법사를 완료하십시오.
 +
 관리자 계정의 비밀번호를 정의해야 합니다. Deploy 유틸리티에 로그인할 때 이 비밀번호를 입력해야 합니다.
 
 . VM이 배포된 후 새 VM을 선택하세요. 배포 마법사에서 입력한 내용에 따라 VM의 전원이 아직 켜져 있지 않으면 수동으로 켜세요.
 . 필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.
 +
-.. *Console* 탭을 선택하여 ESXi 호스트 설정 셸에 액세스하고 전원 켜기 프로세스를 모니터링하십시오.
+.. * 콘솔 * 탭을 클릭하여 ESXi 호스트 설정 셸에 액세스하고 전원 켜기 프로세스를 모니터링하십시오.
 .. 다음 메시지가 나타날 때까지 기다리세요.
 +
 호스트 이름 :
@@ -138,7 +140,7 @@ vSphere를 사용하는 경우, OVF 템플릿 배포 마법사에는 네트워�
 DHCP를 사용하여 네트워킹 정보를 설정합니까? [n]:
 
 .. 정적 IP 구성을 정의하려면 *n*을 입력하고, DHCP를 사용하려면 *y*를 입력한 후 *Enter*를 선택합니다.
-.. 정적 구성을 선택하는 경우 필요한 모든 네트워크 구성 정보를 제공하십시오.
+.. 정적 구성을 선택하는 경우, 필요에 따라 모든 네트워크 구성 정보를 제공하세요.
 
 
 
@@ -198,9 +200,9 @@ Use DHCP to set networking information? [n]:
 ====
 
 
-== 4단계: Deploy 웹 인터페이스에 Sign in
+== Deploy 웹 인터페이스에 Sign in
 
-웹 사용자 인터페이스에 Sign in하여 Deploy 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행합니다.
+웹 사용자 인터페이스에 Sign in하여 Deploy 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행해야 합니다.
 
 .단계
 . IP 주소나 도메인 이름을 사용하여 브라우저에서 Deploy 유틸리티를 가리키세요.
@@ -209,7 +211,7 @@ Use DHCP to set networking information? [n]:
 
 . 관리자(admin) 계정 이름과 비밀번호를 입력하고 로그인하세요.
 . * ONTAP Select 에 오신 것을 환영합니다* 팝업 창이 표시되면 필수 구성 요소를 검토하고 *확인*을 선택하여 계속 진행합니다.
-. 처음으로 로그인하는 경우 vCenter에서 제공하는 마법사를 사용하여 Deploy를 설치하지 않은 경우 메시지가 표시되면 다음 구성 정보를 제공하세요.
+. 처음 로그인하는 경우이고 vCenter에서 사용할 수 있는 마법사를 사용하여 Deploy를 설치하지 않은 경우 메시지가 표시될 때 다음 구성 정보를 제공하십시오.
 +
 ** 관리자 계정의 새 비밀번호(필수)
 ** AutoSupport (선택 사항)
@@ -218,10 +220,7 @@ Use DHCP to set networking information? [n]:
 
 
 
-.다음 단계:
-link:task_deploy_cluster.html["ONTAP Select 클러스터 배포"]
-
 .관련 정보
-* link:task_cli_signing_in.html["SSH를 사용하여 Deploy에 Sign in하는 방법에 대해 알아보세요."]
-* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Select 클러스터의 90일 평가판 인스턴스를 배포하는 방법에 대해 알아보세요."]
+* link:task_cli_signing_in.html["SSH를 사용하여 Deploy에 Sign in"]
+* link:deploy-evaluation-ontap-select-ovf-template.html["ONTAP Select 클러스터의 90일 평가 인스턴스 배포"]
 
