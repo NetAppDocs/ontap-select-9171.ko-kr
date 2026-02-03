@@ -116,12 +116,6 @@
   <block id="30cf2dd94fe579c8d10145706d2803f2" category="admonition">Deploy 관리 유틸리티를 사용하여 기존 ONTAP Select 노드를 업그레이드할 수 없습니다. Deploy 유틸리티는 새 ONTAP Select 클러스터를 생성하는 데만 사용할 수 있습니다.</block>
   <block id="debe5df850e1b90f9e0e1e836af7a573" category="section-title">일반 절차</block>
   <block id="6faefe32fa9943fbdd41223aa8a6c274" category="paragraph">높은 수준에서는 다음 단계에 따라 기존 ONTAP Select 노드를 업그레이드해야 합니다.</block>
-  <block id="e105a9c27bf2d9ddd5067b411d434cd6" category="list-text">NetApp 지원 사이트의 다운로드 페이지로 이동합니다.</block>
-  <block id="68f9ff06ec00760816a8852081d652a9" category="inline-link">NetApp 지원 다운로드</block>
-  <block id="332fd48f854bf692aea555e091e1b3cc" category="paragraph"><block ref="332fd48f854bf692aea555e091e1b3cc" category="inline-link-rx"></block></block>
-  <block id="eea1cec828c419810e082867558ec301" category="list-text">* ONTAP Select Node Upgrade*를 클릭합니다.</block>
-  <block id="a864f71b844955db4e27746202712f1b" category="list-text">필요에 따라 모든 프롬프트에 응답하여 적절한 업그레이드 이미지를 선택하고 다운로드합니다.</block>
-  <block id="2e17a67d810d937603511ac8eb9044c5" category="paragraph">ONTAP Select 노드를 업그레이드하기 전에 릴리스 노트에서 추가 정보와 필요한 절차를 검토하세요.</block>
   <block id="4d63a206f9a467135d39dc9c9512fc9e" category="inline-link-macro">지원되는 ONTAP 업그레이드 경로</block>
   <block id="8c3e5d2f8a26562237025f868ae58fd6" category="list-text">ONTAP Select 업그레이드 파일을 사용하여 표준 ONTAP 업그레이드 절차를 사용하여 ONTAP Select 노드를 업그레이드하십시오. 지원되는 업그레이드 경로에 대한 정보는 다음을 참조하세요.<block ref="641712e0b7bbcdbd0a030cb6eba15629" category="inline-link-macro-rx"></block> .</block>
   <block id="46928a27773a23230df6e5bda4c3aeb9" category="section-title">ONTAP Select 노드 되돌리기</block>
@@ -3410,22 +3404,12 @@
   <block id="1d8edcb67cffc7ed8d5c5ba0f36578b7" category="list-text">클러스터가 성공적으로 배포되었는지 확인하려면 클러스터 상태를 표시합니다.</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">다음은 무엇인가요?</block>
   <block id="555e00828dd08d70ecb4ba3a8ffd7cb3" category="paragraph"><block ref="aed7172faa8aaa717810c3226e96b29d" category="inline-link-macro-rx"></block>.</block>
-  <block id="6738f098cd2bba79a1109b07a6b3a4e3" category="summary">Deploy 관리 유틸리티 인스턴스에 ONTAP Select 이미지를 추가할 수 있습니다. 이미지가 설치되면 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다.</block>
   <block id="ff2a9bd49048e73baaf69d5e3097f161" category="paragraph">배포에 새로운 ONTAP Select 이미지를 추가하기 전에 먼저 불필요한 이미지를 제거해야 합니다.</block>
   <block id="7e0a8cfbb81693d645b2e510efe248df" category="admonition">Deploy 유틸리티 인스턴스에 포함된 원래 버전보다 이전 버전의 ONTAP Select 이미지만 추가해야 합니다. NetApp 에서 출시되는 ONTAP Select 의 최신 버전을 추가하는 것은 지원되지 않습니다.</block>
   <block id="374fcbe92413e77c7fc7cda40bfb3be6" category="section-title">1단계: 설치 이미지 다운로드</block>
   <block id="807ad9e65833a6b39b8d8286e8b783f8" category="paragraph">Deploy 유틸리티 인스턴스에 ONTAP Select 이미지를 추가하는 프로세스를 시작하려면 NetApp 지원 사이트에서 설치 이미지를 다운로드해야 합니다. ONTAP Select 설치 이미지는 단일 압축 파일로 포맷되어 있습니다.</block>
-  <block id="42cd2a8efe7c9aac811d923637a0f193" category="list-text">웹 브라우저를 사용하여 NetApp 지원 사이트에 접속하고 *지원 빠른 링크*를 선택하세요.</block>
-  <block id="6168f6eb3f1b81ec759f515fdd7bab98" category="list-text">*주요 작업*에서 *소프트웨어 다운로드*를 선택하고 사이트에 로그인하세요.</block>
-  <block id="84791eb50904d5d426f95112ce50d397" category="list-text">*제품 찾기*를 선택하세요.</block>
-  <block id="a896447aac9deddba0f8b7bc142c079f" category="list-text">아래로 스크롤하여 * ONTAP Select*를 선택하세요.</block>
-  <block id="676522edf33055c4e8da85feed945dc5" category="list-text">*다른 사용 가능한 소프트웨어 선택*에서 *배포 업그레이드, 노드 업그레이드, 이미지 설치*를 선택합니다.</block>
-  <block id="a8601f098fd28588686f1b5ce31da2a1" category="list-text">원하는 업그레이드 패키지 릴리스를 선택하세요.</block>
-  <block id="9bf3ac5f4cb6341117598df735958bdf" category="list-text">최종 사용자 라이선스 계약(EULA)을 검토하고 *동의 및 계속*을 클릭하세요.</block>
-  <block id="def8f653fff47640d3bcce40244c6331" category="list-text">환경에 맞게 필요한 모든 프롬프트에 응답하여 적절한 패키지를 선택하고 다운로드하세요.</block>
   <block id="4ec4ff4105057abcf44071cf2a8f84b6" category="section-title">2단계: Deploy에 설치 이미지 업로드</block>
   <block id="219698a1df9fbd3c16f4a498102fbc3e" category="paragraph">ONTAP Select 설치 이미지를 얻은 후에는 해당 파일을 Deploy 가상 머신에 업로드해야 합니다.</block>
-  <block id="2a5d9f3f5564baf37e1d1a8cf1a3b68c" category="paragraph">로컬 워크스테이션에 설치 이미지 파일이 있어야 합니다. 또한 Deploy 관리자 계정의 비밀번호도 필요합니다.</block>
   <block id="2b4b559d53be4bdb64aeeae26870beb2" category="paragraph">이 작업에서는 가상 머신 배포에 파일을 업로드하는 한 가지 방법을 설명합니다. 사용자 환경에 더 적합한 다른 옵션이 있을 수 있습니다.</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">단계</block>
   <block id="3ad5852905f7d86a4b551630b78bec6f" category="list-text">로컬 워크스테이션의 명령 셸에서 다음 예시와 같이 이미지 파일을 가상 머신 배포에 업로드합니다.</block>
@@ -3551,16 +3535,7 @@
   <block id="18c3c3eb46e4632917dcdff90d15d0de" category="list-text">회사명 (필수)</block>
   <block id="bf228c91d777320bb66324531a85cdb5" category="list-text">프록시 URL(선택 사항)</block>
   <block id="a070d5cad46a2ff939c511d82e8fa8a6" category="list-text">*?*를 입력하고 *Enter*를 누르면 사용 가능한 관리 셸 명령 목록이 표시됩니다.</block>
-  <block id="c9732055d20960435002cec722852b3e" category="summary">명령줄 인터페이스를 사용하여 기존 Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.</block>
-  <block id="6a72bf96d9b994589542338ffd146590" category="doc">ONTAP Select Deploy 인스턴스 업그레이드</block>
-  <block id="aee852b160915b647628e7eef82ecf7e" category="paragraph">ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 그대로 업그레이드할 수 있습니다.</block>
-  <block id="37d4c938e6c31c7ec9166448ac3458f3" category="paragraph">업그레이드하는 동안 ONTAP Select Deploy를 사용하여 다른 작업을 수행하지 않도록 하세요. ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보와 제한 사항은 최신 릴리스 노트를 참조하세요.</block>
   <block id="298707edb3b539391aec5a5a89670001" category="paragraph">ONTAP Select Deploy 관리 유틸리티의 이전 버전이 설치되어 있는 경우 최신 릴리스로 업그레이드해야 합니다. ONTAP Select 노드와 ONTAP Select Deploy 구성 요소는 독립적으로 업그레이드됩니다. 보다<block ref="fb380fde33185400cd8ee6587621860d" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
-  <block id="35767fb08a64b94abf91d7c25ea1b1d5" category="paragraph">ONTAP Select Deploy 9.16.1 또는 9.15.1에서 ONTAP Select Deploy 9.17.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.14.1 또는 이전 버전에서 업그레이드하려면 ONTAP Select 버전의 릴리스 노트를 검토하세요.</block>
-  <block id="db1b7c6bff7b0da47260c4e758478bf5" category="section-title">1단계: 패키지 다운로드</block>
-  <block id="c81ba5c62604d6722d8975fb55e13972" category="paragraph">업그레이드 프로세스를 시작하려면 해당 ONTAP Select Deploy 가상 머신 업그레이드 파일을 다운로드하세요.<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> . 업그레이드 패키지는 단일 압축 파일로 포맷되어 있습니다.</block>
-  <block id="0f0e87daa63b5587a3d3f02aefb73403" category="list-text">접속하세요<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 다운로드 메뉴에서 *다운로드*를 선택하세요.</block>
-  <block id="dce12db5fd853ebf9ecc2b9677234aa6" category="list-text">아래로 스크롤하여 * ONTAP Select Deploy Upgrade*를 선택합니다.</block>
   <block id="d3a9739a4d6cf4fc9efd4b7704905c48" category="list-text">최종 사용자 라이선스 계약(EULA)을 검토하고 *동의 및 계속*을 선택하세요.</block>
   <block id="1bd278b7a759195dc2c65f644c38efc6" category="section-title">2단계: ONTAP Select</block>
   <block id="58d35d75d5ec4b24d42607d4bf519bb0" category="paragraph">패키지를 다운로드한 후 ONTAP Select Deploy 가상 머신에 파일을 업로드해야 합니다.</block>
@@ -3718,22 +3693,11 @@
   <block id="785cc01cf7efbfd5a1fd1d4863d9b83a" category="paragraph">클러스터를 배포한 후,<block ref="af0babf33c9640eb381afcb6484c80f3" category="inline-link-macro-rx"></block> 그런 다음<block ref="530c589d5a11589fc0cbd2126b61e792" category="inline-link-macro-rx"></block> .</block>
   <block id="106b2acee8931f9a5618948233ee3f9a" category="paragraph">클러스터 생성 작업이 시작되었지만 완료되지 않으면 정의한 ONTAP 관리 암호가 적용되지 않을 수 있습니다. 이 경우 다음 CLI 명령을 사용하여 ONTAP Select 클러스터의 임시 관리 암호를 확인할 수 있습니다.</block>
   <block id="2e872cc50863e55fb4478e06d9231f07" category="summary">ONTAP Select Deploy 관리 유틸리티를 설치하고 해당 유틸리티를 사용하여 ONTAP Select 클러스터를 생성해야 합니다.</block>
-  <block id="da691cb71c1f879ed7bf93a9a845601a" category="section-title">가상 머신 이미지 다운로드</block>
-  <block id="4457cc766e233dbf5bfec7006eded349" category="paragraph">NetApp 지원 사이트에서 ONTAP Select 패키지를 다운로드할 수 있습니다.</block>
   <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">등록된 NetApp 지원 사이트 계정이 있습니다.</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>.</block>
-  <block id="53e646b7dd5ddb95bd47f8626f05f330" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 가상 머신(VM)으로 패키징되어 있습니다. 단일 압축 파일에는 접미사가 있습니다.<block ref="f81b21fb4e12a0e6917f955a9a305553" prefix=" " category="inline-code"></block> . VM은 ONTAP Select 노드에 대한 배포 서버와 설치 이미지를 제공합니다</block>
-  <block id="a8b083480f6b19e605e4aaa8bd3425f1" category="list-text">접속하세요<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block> 웹 브라우저를 사용하여 로그인하세요.</block>
-  <block id="cc97556611cf17d7a90f16087052f93b" category="list-text">메뉴에서 *다운로드*를 선택한 다음, 드롭다운 메뉴에서 *다운로드*를 선택하세요.</block>
-  <block id="ab0ffe542101d39137dce2c19869d545" category="list-text">다운로드 페이지의 모든 제품 AZ에서 *O* 문자를 선택하세요.</block>
-  <block id="49f3378bb78e3d9783ddf1d56b07097e" category="list-text">원하는 패키지 릴리스를 선택하세요.</block>
-  <block id="a0ce89b8db68d7f3e4fb721f6bf6c751" category="list-text">적절한 패키지를 선택하여 다운로드하고, 필요에 따라 모든 메시지에 응답하세요.</block>
-  <block id="8435c401e57e043b0c57edfb0a00c774" category="section-title">ONTAP Select Deploy OVA 서명 확인</block>
-  <block id="ab07c13a31893a6c9ee2547e7b9df643" category="paragraph">설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA) 서명을 확인해야 합니다.</block>
   <block id="cfa6562e428e1a648631dac061567897" category="paragraph">시스템이 다음 요구 사항을 충족하는지 확인하세요.</block>
   <block id="80c9c2739b6086de81c8ec7262f87af8" category="list-text">기본 검증을 위한 OpenSSL 버전 1.0.2~3.0</block>
   <block id="03018e3ee63fad9b70308ee5184022f9" category="list-text">OCSP(온라인 인증서 상태 프로토콜) 검증을 위한 공용 인터넷 액세스</block>
-  <block id="940949e444a7d7ca33644736f8b10bcd" category="list-text">NetApp 지원 사이트의 제품 다운로드 페이지에서 다음 파일을 받으세요.</block>
   <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">파일</block>
   <block id="249111a1c7f415853c625e0755631d11" category="cell"><block ref="008c7b6d630fe84ef2d584c45f088cb2" prefix="" category="inline-code"></block></block>
   <block id="e4069d9d0927b15ac9a4b5a57f151285" category="cell">서명을 확인하는 데 사용되는 공개 키입니다.</block>
@@ -3746,9 +3710,6 @@
   <block id="4e4e408ba11d90a1648acdc6230e66d0" category="cell"><block ref="20db26963ac3dc0b119aa4c781855701" prefix="" category="inline-code"></block></block>
   <block id="51efe37fbdc37f9d0c55c657a430d296" category="cell">SHA-256 알고리즘은 해시된 후 원격 지원 에이전트(RSA)에 의해 서명됩니다.<block ref="b6ad60ee94a07b2ba8c24c883ec70503" prefix=" " category="inline-code"></block> 설치자를 위한 키와 서명.</block>
   <block id="1f463ad70f232a0c4114c51cb2a44a5a" category="list-text">다음을 확인하십시오.<block ref="20db26963ac3dc0b119aa4c781855701" prefix=" " category="inline-code"></block> 파일은 연관된 인증서와 검증 명령을 사용하고 있습니다.</block>
-  <block id="134cfba28fd247854afe7ce4d31767ad" category="list-text">다음 명령을 사용하여 서명을 확인하세요.</block>
-  <block id="0ba1987cb555e519f115071e917656fc" category="section-title">가상 머신 배포</block>
-  <block id="1eadabe4e39cf3ae5ce71caf6ddc8447" category="paragraph">OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작해야 합니다. 설치 과정에서 네트워크 인터페이스가 DHCP 또는 고정 IP 구성을 사용하도록 구성합니다.</block>
   <block id="a295d719442375039396c1ff541e8a8f" category="paragraph">ESXi 하이퍼바이저의 경우 ONTAP Select Deploy VM을 배포할 준비를 해야 합니다.</block>
   <block id="780f7110b279a0cc42242a48431ab5bd" category="list-text">VMware 클라이언트 통합 플러그인을 설치하거나 필요에 따라 유사한 구성을 수행하여 브라우저에서 OVF 기능을 활성화합니다.</block>
   <block id="171890587c5a7811013eb0e4f687968f" category="list-text">Deploy VM에 동적으로 IP 주소를 할당하려면 VMware 환경에서 DHCP를 활성화하세요.</block>
@@ -3762,11 +3723,9 @@
   <block id="30e58d6b4fce06c690ff3897ae040f55" category="paragraph">vSphere를 사용하는 경우, OVF 템플릿 배포 마법사에는 네트워크 구성을 포함한 모든 배포 구성 정보를 제공하는 양식이 포함되어 있습니다. 하지만 이 양식을 사용하지 않으려면 VM 배포 콘솔을 사용하여 네트워크를 구성할 수 있습니다.</block>
   <block id="922bafb0938c68773e29242e2675f0b9" category="paragraph">따라야 할 단계는 ESXi 또는 KVM 하이퍼바이저를 사용하는지 여부에 따라 달라집니다.</block>
   <block id="c7b5afc9e76543d6c823b8732fde22cc" category="list-text">계층 구조에서 적절한 위치로 이동하여 *OVF 템플릿 배포*를 선택합니다.</block>
-  <block id="3186b86d87a207cefd5620929256fbd0" category="list-text">OVA 파일을 선택하고 OVF 템플릿 배포 마법사를 완료하고 환경에 적합한 옵션을 선택합니다.</block>
   <block id="c400d3339e8bc65ccc2657e3aee763be" category="paragraph">관리자 계정의 비밀번호를 정의해야 합니다. Deploy 유틸리티에 로그인할 때 이 비밀번호를 입력해야 합니다.</block>
   <block id="6e0cb8704cabb0eb79ea7580ba166b3e" category="list-text">VM이 배포된 후 새 VM을 선택하세요. 배포 마법사에서 입력한 내용에 따라 VM의 전원이 아직 켜져 있지 않으면 수동으로 켜세요.</block>
   <block id="1c2f49da17d54e224e8288edcb35fd8b" category="list-text">필요한 경우 VM 콘솔을 사용하여 배포 네트워크를 구성할 수 있습니다.</block>
-  <block id="1d7370ec51f294f5948f3cc2550b812a" category="list-text">*콘솔* 탭을 클릭하여 ESXi 호스트 설정 셸에 액세스하고 전원 켜기 프로세스를 모니터링합니다.</block>
   <block id="4b6e5972b38c860adc515c05d7100df8" category="list-text">다음 메시지가 나타날 때까지 기다리세요.</block>
   <block id="08dc93d24cbfbbfd880b1bb1ccc94728" category="paragraph">호스트 이름 :</block>
   <block id="be35756ada0a94e987f82992b890a61a" category="list-text">호스트 이름을 입력하고 *Enter*를 누르세요.</block>
@@ -3780,17 +3739,12 @@
   <block id="5e3c1106cdccc5163a9adeb91282141d" category="list-text">Deploy 관리 유틸리티를 실행하여 KVM VM을 만들고 시작합니다.</block>
   <block id="2f1d867c33574a0e8fe8ef9afc5d3296" category="list-text">VM 콘솔에 연결:</block>
   <block id="6cc6377064b4e1df43ff21fb26f8883a" category="list-text">호스트 이름을 입력하고 *Enter*를 선택하세요.</block>
-  <block id="25775c61c3281e6d412f48371102d8b3" category="section-title">Deploy 웹 인터페이스에 Sign in</block>
-  <block id="887ee30caedf2bee91979565f5ddf01e" category="paragraph">배포 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행하려면 웹 사용자 인터페이스에 로그인해야 합니다.</block>
   <block id="32be4d152f2326423c990dde583d8768" category="list-text">IP 주소나 도메인 이름을 사용하여 브라우저에서 Deploy 유틸리티를 가리키세요.</block>
   <block id="cc0e719d3ebda123b94502d26d56a7eb" category="paragraph"><block ref="5ecf8b6869afd2efb46edbb07a649207" prefix="" category="inline-code"></block></block>
   <block id="533f8108cde4f7f1af2f1fb435cc4710" category="list-text">관리자(admin) 계정 이름과 비밀번호를 입력하고 로그인하세요.</block>
   <block id="b41a57a870dbb2988a82d37df74541fa" category="list-text">* ONTAP Select 에 오신 것을 환영합니다* 팝업 창이 표시되면 필수 구성 요소를 검토하고 *확인*을 선택하여 계속 진행합니다.</block>
-  <block id="28258323eaa4732b0beafbc8b083a5ab" category="list-text">처음으로 로그인하는 경우 vCenter에서 제공하는 마법사를 사용하여 Deploy를 설치하지 않은 경우 메시지가 표시되면 다음 구성 정보를 제공하세요.</block>
   <block id="0dd298d83de1b2c4259299d711cefb70" category="list-text">AutoSupport (선택 사항)</block>
   <block id="3b08ef3085886d9469e1dc839034e127" category="list-text">계정 자격 증명이 있는 vCenter 서버(선택 사항)</block>
-  <block id="0778e2d9c54386153e2e52bad4129abe" category="inline-link-macro">SSH를 사용하여 배포에 Sign in</block>
-  <block id="ccbbd15600c60abef8f9d734d84b4a4e" category="list-text"><block ref="ccbbd15600c60abef8f9d734d84b4a4e" category="inline-link-macro-rx"></block></block>
   <block id="b28ceb45f344ed12e54e3531ae0bac88" category="summary">ONTAP Select 노드에서 사용하는 각 용량 풀에 대한 라이선스 파일을 획득해야 합니다. 라이선스 파일은 풀의 스토리지 용량과 만료일을 정의합니다. 라이선스 파일은 NetApp 에서 할당한 고유 라이선스 일련 번호와 배포 인스턴스와 연결된 라이선스 잠금 ID를 조합하여 라이선스 관리자에 잠깁니다.</block>
   <block id="b06635debd20e5d8f23e5fd54016e095" category="doc">ONTAP Select Capacity Pool 라이선스 획득</block>
   <block id="332320e6473eb55e261b81cf0938cfbc" category="paragraph">NetApp 에서 용량 풀에 할당한 9자리 라이선스 일련 번호가 있어야 합니다. 라이선스 파일을 받기 전에 구매 주문서 발송일로부터 최소 24시간을 기다려야 합니다.</block>
@@ -3944,4 +3898,45 @@
   <block id="02d99372e9e1eb54a9dddd0b08891357" category="list-text">Red Hat Enterprise Linux (RHEL) 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
   <block id="f1200e5ffcff7a7cc8b8ea25410cc78a" category="list-text">Rocky Linux 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 및 8.6</block>
   <block id="d65f97fb1a167a35c6951233420ba74d" category="list-text">Red Hat Enterprise Linux (RHEL) 64비트 10.1, 10.0, 9.7, 9.6, 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.8, 8.7 및 8.6</block>
+  <block id="e9acce0d3652d40c91f9bd7e814291c0" category="inline-link-macro">NetApp Support 사이트 다운로드</block>
+  <block id="17838336399b2e69627cea0614c17f30" category="list-text"><block ref="8e92c016cc209b5ea10cc71b5bfe5577" category="inline-link-macro-rx"></block> 페이지에 액세스합니다.</block>
+  <block id="102500ba079e1f102bac567290d3e053" category="list-text">아래로 스크롤하여 *ONTAP Select Image*를 선택합니다.</block>
+  <block id="1ccd2fe0ab425cd480daec44d7c332ba" category="list-text">설치 이미지의 원하는 릴리스를 선택합니다.</block>
+  <block id="b0ccaa273cbf1ac7308b75b9c7fd6d4e" category="list-text">적절한 *ONTAP Select Image Upgrade* 패키지를 선택하여 다운로드하십시오. 필요에 따라 모든 프롬프트에 응답하십시오.</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">릴리스 노트</block>
+  <block id="b7a85c17919c6d783689e1a6530de3d7" category="paragraph">ONTAP Select 노드를 업그레이드하기 전에 추가 정보 및 필요한 절차는 <block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>를 검토하십시오.</block>
+  <block id="ab0efa1679a96e82121715180bb36a1d" category="summary">Deploy 관리 유틸리티 인스턴스에 ONTAP Select 이미지를 추가하십시오. 설치 후 ONTAP Select 클러스터를 배포할 때 사용할 수 있습니다.</block>
+  <block id="91dd9283705750f9fe7e837b0a40349f" category="paragraph">Deploy 관리 유틸리티 인스턴스에 ONTAP Select 이미지를 추가하십시오. 이미지가 설치되면 ONTAP Select 클러스터를 배포할 때 해당 이미지를 사용할 수 있습니다.</block>
+  <block id="c887723161d2b70aba693fc5b80ea33b" category="list-text">적절한 *ONTAP Select Image Install* 패키지를 선택하여 다운로드하십시오. 필요에 따라 모든 프롬프트에 응답하십시오.</block>
+  <block id="04574480371a2b80422d880e51839d84" category="paragraph">로컬 워크스테이션에 설치 이미지 파일이 있는지 확인하십시오. 또한 Deploy 관리자 사용자 계정의 암호가 필요합니다.</block>
+  <block id="a935f72e89684cc4e1e44be3fa93301b" category="doc">1단계: 업그레이드 패키지 다운로드</block>
+  <block id="4138c5c743e6f7a38cc7aa46349fddb8" category="paragraph">sidebar: sidebar permalink: task_cli_upgrade_deploy.html keywords: administer, administering, cli, deploy, upgrade deploy summary: 명령줄 인터페이스를 사용하여 기존 Deploy 유틸리티 가상 머신을 제자리에서 업그레이드할 수 있습니다. --- = ONTAP Select Deploy 인스턴스 업그레이드 :hardbreaks: :nofooter: :icons: font :linkattrs: :imagesdir: ./media/</block>
+  <block id="71b6b56cdf9a8f06858b086466ade95e" category="paragraph">ONTAP Select Deploy 유틸리티 CLI를 사용하여 기존 ONTAP Select Deploy 유틸리티 가상 머신을 제자리에서 업그레이드합니다.</block>
+  <block id="893d0216a6847b8a50f3efc04d175542" category="paragraph">업그레이드 중에 ONTAP Select Deploy가 다른 작업을 수행하는 데 사용되지 않는지 확인하십시오. ONTAP Select Deploy 유틸리티 업그레이드에 대한 정보 및 제한 사항은 <block ref="3dda619db99e14ba32fb3b3389030b7d" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="bb68cf2408900213fd35084701d5c32c" category="paragraph">ONTAP Select Deploy 9.17.1 또는 9.16.1에서 ONTAP Select Deploy 9.18.1로 직접 업그레이드할 수 있습니다. ONTAP Select Deploy 9.15.1 이하 버전에서 업그레이드하려면 사용 중인 ONTAP Select 버전의 릴리스 노트를 참조하십시오.</block>
+  <block id="9c7dbffc228f5e20cfc38dd2e9d52183" category="paragraph">업그레이드 프로세스를 시작하려면 NetApp Support 사이트에서 ONTAP Select Deploy 업그레이드 파일을 다운로드하십시오. 업그레이드 패키지는 단일 압축 파일 형식으로 제공됩니다.</block>
+  <block id="c7de263deca2f546c4c7b9417bbb6aec" category="list-text">아래로 스크롤하여 *ONTAP Select Deploy*를 선택합니다.</block>
+  <block id="224ba05e3cb699bfc71537bae00db024" category="list-text">원하는 ONTAP Select 버전을 선택하십시오.</block>
+  <block id="edef4f12cb19840bbbb69b8757b99015" category="list-text">적절한 *ONTAP Select Deploy Upgrade* 패키지를 선택하여 다운로드하십시오. 필요에 따라 모든 프롬프트에 응답하십시오.</block>
+  <block id="916c12b3fbccb1ff32e8a4776708798e" category="section-title">1단계: 가상 머신 이미지를 다운로드합니다</block>
+  <block id="b6754a68a857ab2b2389816249373a57" category="paragraph">NetApp Support 사이트에서 ONTAP Select 패키지를 다운로드합니다.</block>
+  <block id="1ace48b65c22215b19f774b3df5f35bc" category="paragraph">ONTAP Select Deploy 관리 유틸리티는 OVF(Open Virtualization Format) 표준을 기반으로 하는 가상 머신(VM)으로 패키징되어 있습니다. 단일 압축 파일은 ESXi 호스트용<block ref="586ba478b7ebec665f3df120799b6c2e" prefix=" " category="inline-code"></block> 확장자와 KVM 호스트용<block ref="fe0b8e90d35ee4c0d89c53587e2d402e" prefix=" " category="inline-code"></block> 확장자를 가집니다. 이 VM은 ONTAP Select 노드용 Deploy 서버와 설치 이미지를 제공합니다.</block>
+  <block id="1b889c4574d56e52bb5c7740f68139d2" category="list-text">적절한 *ONTAP Select Deploy Install* 패키지를 선택하여 다운로드하십시오. 필요에 따라 모든 프롬프트에 응답하십시오.</block>
+  <block id="0230ee7e6071858ebc377c057e5e603e" category="section-title">2단계: ONTAP Select Deploy OVA 서명을 확인합니다</block>
+  <block id="9e0015dd89b19bd3443ad4f4a14527ab" category="paragraph">설치 패키지를 설치하기 전에 ONTAP Select Open Virtualization Appliance(OVA) 서명을 확인하십시오.</block>
+  <block id="3f5028687bfdb0f40e4748a9cf9f5076" category="list-text">NetApp Support 사이트의 제품 다운로드 페이지에서 다음 파일을 가져옵니다.</block>
+  <block id="f754a351095ccdb252bb15b2152c09f3" category="list-text">서명을 확인하십시오.</block>
+  <block id="35f9f1c9a9790bd3fc497db798819083" category="section-title">3단계: 가상 머신 배포</block>
+  <block id="a84a05d08c99af325673887887ed8fdb" category="paragraph">OVF VM 이미지를 사용하여 ONTAP Select Deploy VM을 설치하고 시작합니다. 설치 과정의 일부로 DHCP 또는 고정 IP 구성을 사용하도록 네트워크 인터페이스를 구성합니다.</block>
+  <block id="5029ec7f3dcb7c58660c1d47f8dce6c3" category="list-text">OVA 파일을 선택하고 Deploy OVF Template 마법사를 완료하십시오. 사용 환경에 맞는 옵션을 선택하십시오.</block>
+  <block id="77b39f7b1e60aa5d2af3e45d47ff1adf" category="list-text">*Console* 탭을 선택하여 ESXi 호스트 설정 셸에 액세스하고 전원 켜기 프로세스를 모니터링하십시오.</block>
+  <block id="b976538163f8bd7f20f37762f79adba6" category="list-text">정적 구성을 선택하는 경우 필요한 모든 네트워크 구성 정보를 제공하십시오.</block>
+  <block id="7e5f2ca43da3004f8d3d7bae3edb7bae" category="section-title">4단계: Deploy 웹 인터페이스에 Sign in</block>
+  <block id="896f4c4fdd4e61c33a930415e20d88d3" category="paragraph">웹 사용자 인터페이스에 Sign in하여 Deploy 유틸리티를 사용할 수 있는지 확인하고 초기 구성을 수행합니다.</block>
+  <block id="a88f396cb1d0d25e4d7b5bc9e25d3617" category="paragraph-title">다음 단계:</block>
+  <block id="4452a56e6eb6220413b5f5ed2b39c2eb" category="paragraph"><block ref="4452a56e6eb6220413b5f5ed2b39c2eb" category="inline-link-macro-rx"></block></block>
+  <block id="186a0749125d9c043615b75ece89e1b9" category="inline-link-macro">SSH를 사용하여 Deploy에 Sign in하는 방법에 대해 알아보세요.</block>
+  <block id="3127e7fd2160f6fce263d627cbcb5a4d" category="list-text"><block ref="3127e7fd2160f6fce263d627cbcb5a4d" category="inline-link-macro-rx"></block></block>
+  <block id="53e65bd37d1e95a079cd2ec376ccf900" category="inline-link-macro">ONTAP Select 클러스터의 90일 평가판 인스턴스를 배포하는 방법에 대해 알아보세요.</block>
+  <block id="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="list-text"><block ref="f5f0f7b9b906ffe1f1af3b3d9bc2a475" category="inline-link-macro-rx"></block></block>
 </blocks>
