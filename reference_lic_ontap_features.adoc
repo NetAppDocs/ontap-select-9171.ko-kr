@@ -38,6 +38,10 @@ NOTE: 하드웨어별 종속성이 있는 ONTAP 기능은 일반적으로 ONTAP 
 * ONTAP 멀티테넌시 기능
 * ONTAP S3
 * S3 SnapMirror
+* SnapLock Select
++
+SnapLock Select는 ONTAP Select용으로 설계된 ONTAP SnapLock 구현이며 SnapLock Enterprise를 포함합니다. SnapLock Compliance는 포함되어 있지 않습니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock 설명서"^]을 참조하십시오.
+
 * SnapMirror
 * SnapMirror 클라우드
 * SnapRestore
@@ -61,7 +65,7 @@ NOTE: ONTAP Select 최대 16개의 관계를 가진 SVM DR을 소스 및 대상�
 
 [NOTE]
 ====
-* ONTAP Select 9.16.1 및 이전 버전의 경우 SnapLock Select Enterprise(변조 방지 스냅샷 잠금 포함)를 다음에서 사용할 수 있습니다.link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^] .
+* ONTAP Select 9.16.1 이하 버전의 경우 SnapLock Select(변조 방지 스냅샷 잠금 포함)는 link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^]에서 사용할 수 있습니다.
 * ONTAP Select 에서는 SnapLock Compliance 지원되지 않습니다.
 * StorageGRID 활용하는 경우 FabricPool 라이선스가 필요하지 않습니다.
 
