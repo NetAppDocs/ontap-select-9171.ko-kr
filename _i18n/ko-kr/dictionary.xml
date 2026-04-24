@@ -3226,7 +3226,6 @@
   <block id="a811207ba17996dc78a58667cd177a13" category="inline-link-macro">호스트 준비 체크리스트</block>
   <block id="3f47eb1c93cfecc035015d51dea43351" category="inline-link-macro">배포 유틸리티 설치</block>
   <block id="650b54030913723e437a2beaa84f5e95" category="inline-link-macro">ONTAP Select 설치</block>
-  <block id="2eb8006ba6af294cdeda2a87c467fa5c" category="paragraph">를 따르세요<block ref="98f788baf075ad6e86ad4cdcdcd40ae3" category="inline-link-macro-rx"></block> , 그리고 필요한 정보를 검토하세요.<block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block> 그리고<block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="9ee25f36a4c63773203c1547efed4fc1" category="paragraph">새 ONTAP Select 클러스터를 생성하기 전에 이 절차를 수행해야 합니다. 기존 소프트웨어 RAID NVMe 클러스터에 추가 NVMe 드라이브를 구성하는 절차도 수행할 수 있습니다. 이 경우, 드라이브를 구성한 후 SSD 드라이브를 추가할 때처럼 Deploy를 통해 드라이브를 추가해야 합니다. 가장 큰 차이점은 Deploy가 NVMe 드라이브를 감지하고 노드를 재부팅한다는 것입니다. 기존 클러스터에 NVMe 드라이브를 추가할 때는 재부팅 프로세스에 대해 다음 사항에 유의하십시오.</block>
   <block id="fd5c5757c7f7041a2e15ed74c2c32432" category="list-text">Deploy는 재부팅 오케스트레이션을 처리합니다.</block>
   <block id="668ad5825e6f031e6f06ed116fda245d" category="list-text">HA 인수 및 반환은 체계적인 방식으로 수행되지만 집계를 다시 동기화하는 데 시간이 많이 걸릴 수 있습니다.</block>
@@ -3927,4 +3926,5 @@
   <block id="1d6a755bc579447fd7ccaf4c366f016d" category="list-text">ONTAP Select Deploy Mediator와 각 ONTAP Select 노드 간의 RTT는 125ms, 최소 대역폭은 5Mbps입니다</block>
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">Premium 또는 Premium XL 라이센스</block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
+  <block id="e16080ba1221020cf277f79a62c290d9" category="paragraph"><block ref="aa150fc2553a8a0c846847314bde8f61" category="inline-link-macro-rx"></block>을 따르고, <block ref="5f52a4a178eaea2e0c4812fd7a9f2757" category="inline-link-macro-rx"></block> 및 <block ref="b3b43e0c3f8f2e7f8b8f596dd2656645" category="inline-link-macro-rx"></block>에 필요한 정보를 검토하십시오.</block>
 </blocks>
