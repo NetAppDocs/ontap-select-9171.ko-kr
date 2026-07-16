@@ -23,6 +23,7 @@ ONTAP Select 9.14.1부터 KVM 하이퍼바이저 지원이 다시 시작되었�
 ====
 
 
+[[general]]
 == 일반적인
 
 몇 가지 일반적인 질문과 답변이 있습니다.
@@ -55,6 +56,7 @@ NOTE: API v3 릴리스는 이전 버전의 API와 호환되지 않습니다. 새
 
 
 
+[[licenses-installation-upgrades-and-reverts]]
 == 라이센스, 설치, 업그레이드 및 되돌리기
 
 라이센스, 설치, 업그레이드 및 되돌리기와 관련된 여러 가지 질문과 답변이 있습니다.
@@ -125,6 +127,7 @@ CAUTION: 라이선스 파일을 수정하지 마십시오. 수정하면 보안 �
 
 
 
+[[storage]]
 == 스토리지
 
 저장과 관련된 질문과 답변이 여러 개 있습니다.
@@ -216,6 +219,7 @@ vNAS 구성의 경우에만 동일한 호스트에 여러 ONTAP Select 노드를
 
 
 
+[[vcenter]]
 == vCenter
 
 VMware vCenter와 관련된 여러 가지 질문과 답변이 있습니다.
@@ -239,6 +243,7 @@ ONTAP Select Deploy는 다음과 같이 ONTAP Select 노드 및 클러스터 관
 
 
 
+[[ha-and-clusters]]
 == HA 및 클러스터
 
 HA 쌍과 클러스터를 다루는 질문과 답변이 여러 개 있습니다.
@@ -299,6 +304,7 @@ HA 트래픽을 별도의 물리적 인프라에 분리하면 Select VM이 피�
 
 
 
+[[mediator-service]]
 == 중재 서비스
 
 중재 서비스와 관련된 여러 가지 질문과 답변이 있습니다.

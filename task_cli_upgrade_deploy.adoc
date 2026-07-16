@@ -28,6 +28,7 @@ ONTAP Select Deploy 9.16.1 또는 9.15.1에서 ONTAP Select Deploy 9.17.1로 직
 ====
 
 
+[[step-1-download-the-package]]
 == 1단계: 패키지 다운로드
 
 업그레이드 프로세스를 시작하려면 link:https://mysupport.netapp.com/site/["NetApp 지원 사이트"^]에서 적절한 ONTAP Select Deploy 가상 머신 업그레이드 파일을 다운로드하십시오. 업그레이드 패키지는 단일 압축 파일 형식으로 제공됩니다.
@@ -42,6 +43,7 @@ ONTAP Select Deploy 9.16.1 또는 9.15.1에서 ONTAP Select Deploy 9.17.1로 직
 
 
 
+[[step-2-upload-the-package-to-the-ontap-select-deploy-virtual-machine]]
 == 2단계: ONTAP Select
 
 패키지를 다운로드한 후 ONTAP Select Deploy 가상 머신에 파일을 업로드해야 합니다.
@@ -67,6 +69,7 @@ scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide pas
 
 
 
+[[step-3-apply-the-upgrade-package]]
 == 3단계: 업그레이드 패키지 적용
 
 업그레이드 파일을 ONTAP Select Deploy 가상 머신에 업로드한 후 업그레이드를 적용할 수 있습니다.

@@ -19,6 +19,7 @@ ONTAP Select 의 지원되는 버전에서 제공되는 새로운 기능과 향�
 
 
 
+[[ontap-select-9-17-1]]
 == ONTAP Select 9.17.1
 
 ONTAP Select 9.17.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -76,9 +77,9 @@ ONTAP Select Deploy 및 ONTAP Select for ESX는 스토리지 풀에 vSAN 또는 
 
 [NOTE]
 ====
-콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 액세스해야 합니다. 제한된 역할로 작업하는 경우 vSAN ESA 배포에 필요합니다.
+콘텐츠 라이브러리 작업을 수행하려면 추가 권한 수준에 대한 액세스가 필요합니다. 제한된 역할을 사용하는 vSAN ESA 배포 환경에서는 이러한 액세스가 필수적입니다.
 
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html["콘텐츠 라이브러리 작업에 대한 권한 수준 액세스에 대해 알아보세요."^].
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["콘텐츠 라이브러리 작업에 대한 액세스 권한 수준 알아보기"].
 
 ====
 --
@@ -105,6 +106,7 @@ RHEL 10.1 및 10.0과 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에 �
 
 
 
+[[ontap-select-9-16-1]]
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -122,6 +124,7 @@ ONTAP Select 9.16.1에는 여러 가지 새로운 기능과 개선 사항이 포
 
 
 
+[[ontap-select-9-15-1]]
 == ONTAP Select 9.15.1
 
 ONTAP Select 9.15.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -148,6 +151,7 @@ NOTE: 클러스터 확장 및 축소에 대한 지원은 ESX 클러스터에만 
 
 
 
+[[ontap-select-9-14-1]]
 == ONTAP Select 9.14.1
 
 ONTAP Select 9.14.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -160,6 +164,7 @@ VMware vCenter 플러그인 배포가 더 이상 지원되지 않습니다.:: ON
 
 
 
+[[ontap-select-9-13-1]]
 == ONTAP Select 9.13.1
 
 ONTAP Select 9.13.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -171,6 +176,7 @@ TCP를 통한 NVMe 지원:: ONTAP Select 9.13.1로 업그레이드하는 경우 
 
 
 
+[[ontap-select-9-12-1]]
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1은 핵심 ONTAP 제품의 현재 릴리스에 포함된 대부분의 새로운 기능을 활용합니다. ONTAP Select 에만 적용되는 새로운 기능이나 개선 사항은 포함되어 있지 않습니다.
@@ -179,6 +185,7 @@ ONTAP Select 9.12.1은 핵심 ONTAP 제품의 현재 릴리스에 포함된 대�
 
 
 
+[[ontap-select-9-11-1]]
 == ONTAP Select 9.11.1
 
 ONTAP Select 9.11.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -209,6 +216,7 @@ NetApp 고객이 ONTAP Select for KVM에서 ONTAP Select for ESXi를 포함한 �
 
 
 
+[[ontap-select-9-10-1]]
 == ONTAP Select 9.10.1
 
 ONTAP Select 9.10.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -236,6 +244,7 @@ KVM 하이퍼바이저는 더 이상 지원되지 않습니다.:: ONTAP Select 9
 
 
 
+[[ontap-select-9-9-1]]
 == ONTAP Select 9.9.1
 
 ONTAP Select 9.9.1에는 여러 가지 새로운 기능과 개선 사항이 포함되어 있습니다.
@@ -253,6 +262,7 @@ ONTAP Select 9.9.1에는 여러 가지 새로운 기능과 개선 사항이 포�
 
 
 
+[[ontap-select-9-8]]
 == ONTAP Select 9.8
 
 ONTAP Select 9.8에는 여러 가지 새로운 기능과 변경된 기능이 포함되었습니다.

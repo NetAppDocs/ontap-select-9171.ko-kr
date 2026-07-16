@@ -18,12 +18,14 @@ REST(Representational State Transfer)는 분산 웹 애플리케이션을 구축
 
 
 
+[[architecture-and-classic-constraints]]
 == 건축과 고전적 제약
 
 REST는 Roy Fielding이 그의 박사 학위 논문에서 공식적으로 언급했습니다. https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["논문"] 2000년에 UC 어바인에서. 이 논문은 일련의 제약 조건을 통해 아키텍처 스타일을 정의하며, 이러한 제약 조건들이 모여 웹 기반 애플리케이션과 그 기반 프로토콜을 개선합니다. 제약 조건은 상태 비저장 통신 프로토콜을 사용하는 클라이언트/서버 아키텍처 기반의 RESTful 웹 서비스 애플리케이션을 구축합니다.
 
 
 
+[[resources-and-state-representation]]
 == 자원과 국가 대표
 
 리소스는 웹 기반 시스템의 기본 구성 요소입니다. REST 웹 서비스 애플리케이션을 구축할 때 초기 설계 작업은 다음과 같습니다.
@@ -36,12 +38,14 @@ REST는 Roy Fielding이 그의 박사 학위 논문에서 공식적으로 언급
 
 
 
+[[uri-endpoints]]
 == URI 엔드포인트
 
 모든 REST 리소스는 명확하게 정의된 주소 지정 체계를 사용하여 정의하고 제공해야 합니다. 리소스가 위치하고 식별되는 엔드포인트는 URI(Uniform Resource Identifier)를 사용합니다. URI는 네트워크의 각 리소스에 고유한 이름을 생성하는 일반적인 프레임워크를 제공합니다. URL(Uniform Resource Locator)은 웹 서비스에서 리소스를 식별하고 액세스하는 데 사용되는 URI 유형입니다. 리소스는 일반적으로 파일 디렉터리와 유사한 계층 구조로 노출됩니다.
 
 
 
+[[http-messages]]
 == HTTP 메시지
 
 HTTP(Hypertext Transfer Protocol)는 웹 서비스 클라이언트와 서버가 리소스에 대한 요청 및 응답 메시지를 교환하는 데 사용하는 프로토콜입니다. 웹 서비스 애플리케이션을 설계하는 과정에서 HTTP 동사(예: GET 및 POST)는 리소스 및 해당 상태 관리 작업에 매핑됩니다.
@@ -50,6 +54,7 @@ HTTP는 상태를 저장하지 않습니다. 따라서 관련된 요청과 응�
 
 
 
+[[json-formatting]]
 == JSON 포맷팅
 
 클라이언트와 서버 간에 정보를 구조화하고 전송하는 방법은 여러 가지가 있지만, 가장 널리 사용되는 방식(그리고 Deploy REST API와 함께 사용되는 방식)은 JavaScript Object Notation(JSON)입니다. JSON은 간단한 데이터 구조를 일반 텍스트로 표현하는 업계 표준이며, 리소스를 설명하는 상태 정보를 전송하는 데 사용됩니다.

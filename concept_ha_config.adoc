@@ -42,6 +42,7 @@ NOTE: 2노드 ONTAP Select 클러스터는 HA 쌍 하나와 미디에이터 하�
 
 
 
+[[two-node-ha-versus-multi-node-ha]]
 == 2노드 HA 대 다중 노드 HA
 
 FAS 어레이와 달리, HA 쌍의 ONTAP Select 노드는 IP 네트워크를 통해서만 통신합니다. 즉, IP 네트워크는 단일 장애 지점(SPOF)이 되므로 네트워크 분할 및 스플릿 브레인(split-brain) 시나리오로부터 보호하는 것이 설계의 중요한 측면이 됩니다. 다중 노드 클러스터는 세 개 이상의 생존 노드가 클러스터 쿼럼을 구성할 수 있으므로 단일 노드 장애를 견딜 수 있습니다. 2노드 클러스터는 ONTAP Deploy VM에서 호스팅하는 중재자 서비스를 사용하여 동일한 결과를 얻습니다.
@@ -57,6 +58,7 @@ NOTE: ONTAP Deploy VM은 2노드 클러스터의 중재자 역할을 할 때 해
 
 
 
+[[two-node-ha-versus-two-node-stretched-ha-metrocluster-sds]]
 == 2노드 HA 대 2노드 스트레치드 HA(MetroCluster SDS)
 
 2노드 액티브/액티브 HA 클러스터를 더 먼 거리에 걸쳐 확장하고 각 노드를 다른 데이터 센터에 배치할 수도 있습니다. 2노드 클러스터와 2노드 확장 클러스터( MetroCluster SDS라고도 함)의 유일한 차이점은 노드 간 네트워크 연결 거리입니다.

@@ -18,6 +18,7 @@ ONTAP Select 라이선스를 관리하는 과정에서 여러 가지 관련 작�
 
 
 
+[[manage-the-capacity-tier-licenses]]
 == 용량 계층 라이선스 관리
 
 필요에 따라 ONTAP Select Capacity Tier 라이선스를 추가, 편집 및 삭제할 수 있습니다.
@@ -33,6 +34,7 @@ ONTAP Select 라이선스를 관리하는 과정에서 여러 가지 관련 작�
 
 
 
+[[manage-the-capacity-pool-licenses]]
 == 용량 풀 라이선스 관리
 
 필요에 따라 ONTAP Select Capacity Pool 라이선스를 추가, 편집 및 삭제할 수 있습니다.
@@ -81,6 +83,7 @@ ONTAP Select 라이선스를 관리하는 과정에서 여러 가지 관련 작�
 
 
 
+[[reinstall-a-capacity-pool-license]]
 == 용량 풀 라이선스 재설치
 
 모든 활성 용량 풀 라이선스는 Deploy 관리 유틸리티 인스턴스 내에 포함된 특정 라이선스 관리자 인스턴스에 고정됩니다. 용량 풀 라이선스를 사용하다가 Deploy 인스턴스를 복원하거나 복구하면 원래 라이선스는 더 이상 유효하지 않습니다. 새 용량 라이선스 파일을 생성한 후 새 Deploy 인스턴스에 라이선스를 설치해야 합니다.
@@ -145,6 +148,7 @@ ONTAP Select 라이선스를 관리하는 과정에서 여러 가지 관련 작�
 
 
 
+[[convert-an-evaluation-license-to-a-production-license]]
 == 평가판 라이선스를 프로덕션 라이선스로 변환
 
 Deploy 관리 유틸리티를 사용하여 ONTAP Select 평가 클러스터를 업그레이드하여 프로덕션 Capacity Tier 라이선스를 사용할 수 있습니다.
@@ -176,6 +180,7 @@ Deploy 관리 유틸리티를 사용하여 ONTAP Select 평가 클러스터를 �
 
 
 
+[[manage-an-expired-capacity-pool-license]]
 == 만료된 용량 풀 라이선스 관리
 
 일반적으로 라이선스가 만료되면 아무 일도 일어나지 않습니다. 하지만 노드가 만료된 라이선스와 연결되어 있기 때문에 다른 라이선스를 설치할 수 없습니다. 라이선스를 갱신하기 전까지는 재부팅이나 장애 조치(failover) 작업과 같이 집계를 오프라인 상태로 만드는 어떤 작업도 _해서는_ 안 됩니다_. 권장되는 조치는 라이선스 갱신을 신속하게 처리하는 것입니다.
@@ -184,6 +189,7 @@ ONTAP Select 및 라이선스 갱신에 대한 자세한 내용은 라이선스,
 
 
 
+[[manage-add-on-licenses]]
 == 애드온 라이선스 관리
 
 ONTAP Select 제품의 경우, 추가 라이선스는 ONTAP 내에서 직접 적용되며 ONTAP Select Deploy를 통해 관리되지 않습니다. 보다link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["라이선스 관리 개요(클러스터 관리자만 해당)"^] 그리고link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["라이선스 키를 추가하여 새로운 기능을 활성화하세요"^] 자세한 내용은.

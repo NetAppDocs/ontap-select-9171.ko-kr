@@ -35,6 +35,7 @@ CLI, API 또는 웹 인터페이스를 사용하여 ONTAP Select Deploy에서 �
 
 
 
+[[hardware-and-storage-considerations]]
 == 하드웨어 및 스토리지 고려 사항
 
 클러스터 확장 및 축소 기능은 다음 KVM 및 ESXi 하이퍼바이저 호스트에서 지원됩니다.
@@ -80,6 +81,7 @@ RHEL 10.1 및 10.0과 Rocky Linux 10.0 호스트의 KVM 하이퍼바이저에 �
 ====
 
 
+[[expand-the-cluster]]
 == 클러스터 확장
 
 클러스터 확장 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 늘립니다.
@@ -145,6 +147,7 @@ link:task_cli_clusters.html["ONTAP Select Deploy 구성 데이터 백업"].
 
 
 
+[[contract-the-cluster]]
 == 클러스터를 계약하다
 
 클러스터 축소 기능을 사용하여 기존 ESXi 또는 KVM 클러스터의 크기를 줄입니다.
